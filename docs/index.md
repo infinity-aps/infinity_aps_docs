@@ -67,11 +67,44 @@ Infinity APS uses the following libraries:
 
 ### What's Needed to Develop
 
-TODO
+These are the tools needed to develop Infinity APS.
+
+#### [Nerves](https://nerves-project.org/)
+
+To develop with Nerves, you need to install Elixir and Erlang, together with other tools. Although you may already have them in your system, you'll find the detailed recommended installation instructions in the [Nerves homepage](https://hexdocs.pm/nerves/installation.html).
+
+Notice, however, that Infinity APS needs the Nerves release candidate. The correct command to install `nerves_bootstrap` is this:
+
+`$ mix archive.install hex nerves_bootstrap "~> 1.0-rc`
+
+#### [Phoenix Framework](http://phoenixframework.org/)
+
+[Installation instructions](https://hexdocs.pm/phoenix/installation.html#content)
+
+#### [Yarn](https://yarnpkg.com/en/)
+
+[Installation instructions](https://yarnpkg.com/lang/en/docs/install/)
+
+An easy way to install it is this:
+
+`$ sudo npm install -g yarn`
+
 
 ### How to Make It Work in Development
 
-TODO
+Once you have all the tools installed:
+
+* `$ git clone https://github.com/infinity-aps/infinity_aps.git`
+* `$ cd infinity_aps/ui/assets`
+* `$ yarn install`
+* `$ cd ../../host_root`
+* `$ yarn install`
+* `cd ../fw`
+* `mix deps.get`
+* `iex -S mix`
+
+Go with the browswer to `localhost:4000` and you should see the main page.
+
 
 ### Parts of the System
 
